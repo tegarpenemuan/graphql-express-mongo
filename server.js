@@ -25,7 +25,10 @@ async function startServer() {
   //     useNewUrlParser: true,
   //   });
 
-  await mongoose.connect("mongodb://localhost:27017/post_db");
+  const dbName = "post_db";
+  await mongoose.connect("mongodb://root:example@localhost:27017", {
+    dbName: dbName,
+  });
   console.log("Mongoose connected...");
 
   app.listen(4000, () => console.log("Server running on port 4000"));

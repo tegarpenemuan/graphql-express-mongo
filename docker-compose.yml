@@ -21,4 +21,10 @@ volumes:
 #
 # Stop
 # docker compose down
+#
+# Akses di bash container
+# docker exec -it b9afd872ce30 mongosh -u root -p example
+#
+# Akses di mongodb kompas
+# mongodb://root:example@localhost:27017
 
